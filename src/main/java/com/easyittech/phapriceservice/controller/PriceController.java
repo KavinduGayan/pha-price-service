@@ -24,4 +24,8 @@ public class PriceController {
     public ResponseEntity<List<Price>> getAllPriceList(){
         return ResponseEntity.ok().body(priceService.getAllPriceList());
     }
+    @GetMapping("/{drug_id}")
+    public ResponseEntity<Price> getPriceId(@PathVariable("drug_id") Long drugId) {
+        return ResponseEntity.ok().body(priceService.getPriceByDrugId(drugId));
+    }
 }

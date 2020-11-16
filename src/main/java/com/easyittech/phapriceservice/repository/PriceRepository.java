@@ -6,4 +6,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableJpaRepositories
 public interface PriceRepository extends JpaRepository<Price,Long> {
+
+    Price findByDrugId(Long drugId);
 }

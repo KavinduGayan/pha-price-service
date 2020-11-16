@@ -23,4 +23,9 @@ public class PriceServiceImpl implements PriceService {
         price.setTimeStamp(new Date());
         return priceRepository.save(price);
     }
+
+    @Override
+    public Price getPriceByDrugId(Long drugId) {
+        return priceRepository.findByDrugId(drugId);
+    }
 }
