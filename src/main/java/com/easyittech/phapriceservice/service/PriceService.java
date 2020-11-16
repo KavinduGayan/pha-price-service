@@ -8,4 +8,6 @@ public interface PriceService {
     List<Price> getAllPriceList();
 
     Price save(Price price);
+
+    Price getPriceByDrugId(Long drugId);
 }
